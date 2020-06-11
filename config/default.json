@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://matt_thornberry:Lc74SillsQtHjENE@devconnector-prlmg.mongodb.net/<dbname>?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://matt_thornberry:Lc74SillsQtHjENE@devconnector-prlmg.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "jwtSecret": "e5f0f81c-1641-40c3-99b6-9ec2905b9e5e"
 }
