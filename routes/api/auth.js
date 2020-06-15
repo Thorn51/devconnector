@@ -8,7 +8,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 
 // @route   GET api/auth
-// @desc    Test route
+// @desc    GET user by token
 // @access  Public
 router.get("/", auth, async (req, res) => {
   try {
@@ -16,6 +16,7 @@ router.get("/", auth, async (req, res) => {
     res.json(user);
   } catch (err) {
     console.error(err.message);
+    res.status(500).send("Server Error");
   }
 });
 
