@@ -6,6 +6,7 @@ const bcrypt = require("bcryptjs");
 const User = require("../../models/User");
 const jwt = require("jsonwebtoken");
 const config = require("config");
+const xss = require("xss");
 
 // @route   POST api/users
 // @desc    Register user
@@ -46,10 +47,10 @@ router.post(
       });
 
       user = new User({
-        name,
-        email,
+        name: xss(name),
+        email: xss(email),
         avatar,
-        password,
+        password: xss(password),
       });
 
       // Encrypt password
