@@ -204,8 +204,6 @@ router.delete("/comment/:id/:comment_id", auth, async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
 
-    console.log(post.comments);
-
     // Pull out comment
     const commentToRemove = post.comments.find(
       (comment) => comment.id === req.params.comment_id
