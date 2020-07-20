@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { login } from "../../actions/auth";
 
-const Login = () => {
+const Login = ({ login }) => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -14,15 +17,15 @@ const Login = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    login(email, password);
   };
   return (
     <>
-      <div className="alert alert-danger">Invalid credentials</div>
       <h1 className="large text-primary">Sign In</h1>
       <p className="lead">
         <i className="fas fa-user"></i> Sign into Your Account
       </p>
-      <form className="form" action="dashboard.html">
+      <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
           <input
             type="email"
@@ -52,4 +55,8 @@ const Login = () => {
   );
 };
 
-export default Login;
+Login.prototype = {
+  login: PropTypes.func.isRequired,
+};
+
+export default connect(null, { login })(Login);
