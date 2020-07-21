@@ -1,6 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://matt_thornberry:Lc74SillsQtHjENE@devconnector-prlmg.mongodb.net/<dbname>?retryWrites=true&w=majority",
-  "jwtSecret": "e5f0f81c-1641-40c3-99b6-9ec2905b9e5e",
-  "githubClientId": "e9884c54eb0ce9944865",
-  "githubSecret": "2d4f6ab1487a5eea5c9a6826c2f0dce362835beb"
-}
