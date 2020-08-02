@@ -4,7 +4,6 @@ import Navbar from "../src/components/layout/Navbar";
 import Landing from "../src/components/layout/Landing";
 import Login from "../src/components/auth/Login";
 import Register from "../src/components/auth/Register";
-import Alert from "./components/layout/Alert";
 import { loadUser } from "./actions/auth";
 import Dashboard from "../src/components/dashboard/Dashboard";
 import CreateProfile from "../src/components/profile-forms/CreateProfile";
@@ -32,7 +31,6 @@ const App = () => {
           <Navbar />
           <Route exact path="/" component={Landing} />
           <section className="container">
-            <Alert />
             <Switch>
               <Route path="/register" component={Register} />
               <Route path="/login" component={Login} />

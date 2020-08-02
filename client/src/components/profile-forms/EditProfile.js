@@ -1,8 +1,15 @@
 import React, { useState, Fragment, useEffect } from "react";
 import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
+
+// Redux
 import { connect } from "react-redux";
+
+// Actions
 import { createProfile, getCurrentProfile } from "../../actions/profile";
+
+// Components
+import Alert from "../layout/Alert";
 
 const initialState = {
   company: "",
@@ -238,6 +245,7 @@ const ProfileForm = ({
           Go Back
         </Link>
       </form>
+      <Alert />
     </Fragment>
   );
 };
