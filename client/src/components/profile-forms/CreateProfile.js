@@ -1,8 +1,15 @@
 import React, { useState, Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
+
+//Redux
 import { connect } from "react-redux";
+
+//Actions
 import { createProfile } from "../../actions/profile";
+
+//Components
+import Alert from "../layout/Alert";
 
 const CreateProfile = ({ createProfile, history }) => {
   const [formData, setFormData] = useState({
@@ -211,6 +218,7 @@ const CreateProfile = ({ createProfile, history }) => {
           Go Back
         </Link>
       </form>
+      <Alert />
     </Fragment>
   );
 };
