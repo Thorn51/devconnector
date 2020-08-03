@@ -8,9 +8,6 @@ import { connect } from "react-redux";
 //Actions
 import { createProfile } from "../../actions/profile";
 
-//Components
-import Alert from "../layout/Alert";
-
 const CreateProfile = ({ createProfile, history }) => {
   const [formData, setFormData] = useState({
     company: "",
@@ -218,7 +215,6 @@ const CreateProfile = ({ createProfile, history }) => {
           Go Back
         </Link>
       </form>
-      <Alert />
     </Fragment>
   );
 };

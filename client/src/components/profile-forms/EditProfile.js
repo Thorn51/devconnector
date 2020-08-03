@@ -8,9 +8,6 @@ import { connect } from "react-redux";
 // Actions
 import { createProfile, getCurrentProfile } from "../../actions/profile";
 
-// Components
-import Alert from "../layout/Alert";
-
 const initialState = {
   company: "",
   website: "",
@@ -245,7 +242,6 @@ const ProfileForm = ({
           Go Back
         </Link>
       </form>
-      <Alert />
     </Fragment>
   );
 };

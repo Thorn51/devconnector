@@ -15,6 +15,7 @@ import "./App.css";
 import { Provider } from "react-redux";
 import store from "./store";
 import setAuthToken from "./utils/setAuthToken";
+import Alert from "./components/layout/Alert";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -32,6 +33,7 @@ const App = () => {
           <Navbar />
           <Route exact path="/" component={Landing} />
           <section className="container">
+            <Alert />
             <Switch>
               <Route path="/register" component={Register} />
               <Route path="/login" component={Login} />
