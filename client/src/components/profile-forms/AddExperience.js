@@ -3,7 +3,6 @@ import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addExperience } from "../../actions/profile";
-import Alert from "../layout/Alert";
 
 const AddExperience = ({ addExperience, history }) => {
   const [formData, setFormData] = useState({
@@ -115,7 +114,6 @@ const AddExperience = ({ addExperience, history }) => {
         <a className="btn btn-light my-1" href="dashboard.html">
           Go Back
         </a>
-        <Alert />
       </form>
     </Fragment>
   );
