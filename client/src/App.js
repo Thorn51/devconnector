@@ -10,6 +10,7 @@ import CreateProfile from "../src/components/profile-forms/CreateProfile";
 import EditProfile from "../src/components/profile-forms/EditProfile";
 import PrivateRoute from "../src/components/routing/PrivateRoute";
 import AddExperience from "../src/components/profile-forms/AddExperience";
+import AddEducation from "../src/components/profile-forms/AddEducation";
 import "./App.css";
 // Redux
 import { Provider } from "react-redux";
@@ -35,12 +36,29 @@ const App = () => {
           <section className="container">
             <Alert />
             <Switch>
-              <Route path="/register" component={Register} />
-              <Route path="/login" component={Login} />
-              <PrivateRoute path="/dashboard" component={Dashboard} />
-              <PrivateRoute path="/create-profile" component={CreateProfile} />
-              <PrivateRoute path="/edit-profile" component={EditProfile} />
-              <PrivateRoute path="/add-experience" component={AddExperience} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/login" component={Login} />
+              <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              <PrivateRoute
+                exact
+                path="/create-profile"
+                component={CreateProfile}
+              />
+              <PrivateRoute
+                exact
+                path="/edit-profile"
+                component={EditProfile}
+              />
+              <PrivateRoute
+                exact
+                path="/add-experience"
+                component={AddExperience}
+              />
+              <PrivateRoute
+                exact
+                path="/add-education"
+                component={AddEducation}
+              />
             </Switch>
           </section>
         </Fragment>
