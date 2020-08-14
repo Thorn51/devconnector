@@ -13,6 +13,7 @@ import AddExperience from "../src/components/profile-forms/AddExperience";
 import AddEducation from "../src/components/profile-forms/AddEducation";
 import Profile from "./components/profile/Profile";
 import Profiles from "./components/Profiles/Profiles";
+import Posts from "./components/posts/Posts";
 import "./App.css";
 // Redux
 import { Provider } from "react-redux";
@@ -63,6 +64,7 @@ const App = () => {
                 path="/add-education"
                 component={AddEducation}
               />
+              <Posts exact path="/posts" component={Posts} />
             </Switch>
           </section>
         </Fragment>
